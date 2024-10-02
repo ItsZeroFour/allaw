@@ -1,0 +1,121 @@
+@import "./reset";
+@import "./vars";
+@import "./fonts";
+
+/* BASIC SETTINGS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100vw;
+  font-size: 20px;
+
+  @media (min-width: 1900px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 75px;
+}
+
+::-webkit-scrollbar {
+  background: var(--color-white);
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-purple);
+  border-radius: 5px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+
+  @media (max-width: 1580px) {
+    max-width: 1280px;
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: inherit;
+  line-height: 120%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.page-loader {
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+  background: #181717;
+  padding: 60px;
+}
+
+.main {
+  margin-bottom: 180px;
+}
+
+.hide {
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
