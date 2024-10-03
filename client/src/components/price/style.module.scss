@@ -1,0 +1,121 @@
+.price {
+  background: #000;
+  color: var(--color-white);
+  padding: 40px;
+  margin-top: 100px;
+}
+
+.price__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-top: 40px;
+
+  h2 {
+    font-size: 42px;
+    font-family: "Montserrat-eb", sans-serif;
+    font-weight: 800;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      width: 400px;
+      height: 400px;
+
+      .price__item__text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: var(--color-dark);
+        padding: 20px;
+        height: 250px;
+
+        h3 {
+          font-size: 24px;
+          font-family: "Montserrat-bd", sans-serif;
+          font-weight: 700;
+          position: relative;
+          margin-left: 20px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: -6%;
+            width: 15px;
+            height: 15px;
+            background: var(--color-gold);
+          }
+        }
+
+        p {
+          font-size: 20px;
+          font-family: "Montserrat-md", sans-serif;
+          font-weight: 500;
+        }
+      }
+
+      .price__item__price {
+        background: var(--color-dark);
+        padding: 15px;
+
+        div {
+          background: #222222;
+          padding: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          position: relative;
+
+          h4 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+          }
+
+          h3 {
+            font-family: "Montserrat-sb", sans-serif;
+            font-weight: 700;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: var(--color-gold);
+          }
+        }
+      }
+    }
+  }
+}
+
+.price__notification {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h3 {
+    font-size: 24px;
+    font-family: "Montserrat-md", sans-serif;
+    font-weight: 500;
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}

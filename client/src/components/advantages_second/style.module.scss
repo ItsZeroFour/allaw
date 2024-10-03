@@ -1,0 +1,60 @@
+.advantages_second {
+  margin-top: 60px;
+}
+
+.advantages_second__wrapper {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 425px;
+      height: 400px;
+      background: var(--color-dark);
+      padding: 20px;
+      color: var(--color-white);
+
+      p {
+        font-size: 24px;
+        font-family: "Montserrat-md", sans-serif;
+        font-weight: 500;
+      }
+
+      h2 {
+        font-size: 32px;
+        font-family: "Montserrat-bl", sans-serif;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+
+      &:first-child {
+        gap: 30px;
+        background: var(--color-white);
+        color: var(--color-dark);
+      }
+
+      &:nth-child(2) {
+        background: #000;
+      }
+
+      &:nth-child(4) {
+        background: #000;
+      }
+
+      &:nth-child(6) {
+        background: #000;
+      }
+    }
+  }
+}

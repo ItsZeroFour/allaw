@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./style.module.scss";
 import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -15,7 +16,9 @@ const Header = () => {
                 <div></div>
               </div>
 
-              <img src={logo} alt="logo" />
+              <Link to="#">
+                <img src={logo} alt="logo" />
+              </Link>
 
               <h2>ООО «Деловое право»</h2>
             </aside>

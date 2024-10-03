@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   return (
@@ -11,7 +12,7 @@ const Head = () => {
             <p>Правовое сопровождение бизнеса</p>
           </div>
 
-          <button>Связаться с нами</button>
+          <Link to="#contacts">Связаться с нами</Link>
         </div>
       </div>
     </section>

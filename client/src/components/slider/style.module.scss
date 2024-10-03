@@ -1,0 +1,85 @@
+.slider {
+  padding: 150px 0;
+  background: #000;
+
+  .slider__wrapper {
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+  }
+
+  .swiper {
+    width: 100%;
+    padding: 0 10px; // Отступы для обеспечения видимости краев слайдов
+  }
+
+  .swiper-slide {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: auto;
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.slider__item {
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding: 20px;
+  height: 200px;
+}
+
+.slider__navigation {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 100px;
+
+  button {
+    position: absolute;
+
+    z-index: 99;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: none;
+    padding: 10px;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    &:first-child {
+      top: -150%;
+      left: -7%;
+    }
+
+    &:last-child {
+      top: -150%;
+      left: 102%;
+    }
+  }
+}

@@ -44,7 +44,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-purple);
+  background: var(--color-dark);
   border-radius: 5px;
 }
 
@@ -87,7 +87,8 @@ li {
 
 textarea {
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .page-loader {
@@ -110,12 +111,4 @@ textarea {
 
 .main {
   margin-bottom: 180px;
-}
-
-.hide {
-  overflow: hidden;
-}
-
-.no-scroll {
-  overflow: hidden !important;
 }
