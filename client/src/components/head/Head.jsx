@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
+import OrderCall from "../order_call/OrderCall";
 
 const Head = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section className={style.head}>
       <div className="container">
@@ -12,9 +14,11 @@ const Head = () => {
             <p>Правовое сопровождение бизнеса</p>
           </div>
 
-          <a href="#contacts">Связаться с нами</a>
+          <button onClick={() => setShowModal(true)}>Связаться с нами</button>
         </div>
       </div>
+
+      {showModal && <OrderCall openModal={setShowModal} />}
     </section>
   );
 };

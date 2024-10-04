@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
+import OrderCall from "../order_call/OrderCall";
 
 const SinglePrice = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section className={style.single_price}>
       <div className="container">
@@ -88,10 +90,14 @@ const SinglePrice = () => {
               время
             </h3>
 
-            <a href="#contacts">Заказать консультацию</a>
+            <button onClick={() => setShowModal(true)}>
+              Заказать консультацию
+            </button>
           </div>
         </div>
       </div>
+
+      {showModal && <OrderCall openModal={setShowModal} />}
     </section>
   );
 };

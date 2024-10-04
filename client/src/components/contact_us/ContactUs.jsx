@@ -46,7 +46,7 @@ const ContactUs = () => {
           <form>
             <input
               type="text"
-              placeholder="Анатилькин Анатолий Анатольевич *"
+              placeholder="Имя *"
               onChange={(event) => setFullName(event.target.value)}
             />
             <input

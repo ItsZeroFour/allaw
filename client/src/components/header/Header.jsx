@@ -20,7 +20,7 @@ const Header = () => {
                 <img src={logo} alt="logo" />
               </Link>
 
-              <h2>ООО «Деловое право»</h2>
+              <h2>Общество с ограниченной ответственностью «Деловое право»</h2>
             </aside>
 
             <aside className={style.header__right}>
