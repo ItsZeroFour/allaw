@@ -20,21 +20,20 @@ app.use(morgan("common"));
 const transporter = nodemailer.createTransport({
   host: "smtp.mail.ru",
   port: 465,
-  secure: true,
+  secure: false,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
   },
+  tls: {
+    rejectUnauthorized: false
+  },
 });
 
 /* ROUTES */
-app.post("/sendMail", async (req, res) => {
+app.post("/api/sendMail", async (req, res) => {
   try {
     const { email, phone, fullName, message } = req.body;
-
-    if (!email || !fullName || !phone || !message) {
-      return alert("Ошибка! Заполните все поля");
-    }
 
     const html = `
       <div style="display: flex; flex-direction: column; gap: 20px;">
