@@ -12,9 +12,9 @@ const Footer = () => {
         <div className={style.footer__wrapper}>
           <h2>Юридическая компания «Деловое право» – бизнес по закону</h2>
 
-          <Link to="#">
+          <a href="#">
             <img src={logo} alt="Лого ALLaw" />
-          </Link>
+          </a>
 
           <div className={style.footer__contacts}>
             <Link to="mailto:delovoye.pravo@mail.ru">

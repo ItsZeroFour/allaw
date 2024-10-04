@@ -112,3 +112,11 @@ textarea {
 .main {
   margin-bottom: 180px;
 }
+
+.swiper-slide {
+  @media (max-width: 1465px) {
+    width: 96.5% !important;
+    flex-shrink: 0;
+    width: auto;
+  }
+}

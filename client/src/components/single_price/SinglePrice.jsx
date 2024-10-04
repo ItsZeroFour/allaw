@@ -88,7 +88,7 @@ const SinglePrice = () => {
               время
             </h3>
 
-            <Link to="#contacts">Заказать консультацию</Link>
+            <a href="#contacts">Заказать консультацию</a>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 
 const Price = () => {
   return (
-    <section className={style.price}>
+    <section className={style.price} id="prices">
       <div className="container">
         <div className={style.price__wrapper}>
           <h2>Расценки на ежемесячное абонентское обслуживание</h2>

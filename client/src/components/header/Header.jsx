@@ -26,15 +26,13 @@ const Header = () => {
             <aside className={style.header__right}>
               <ul>
                 <li>
-                  <button>Услуги</button>
+                  <a href="#services">Услуги</a>
                 </li>
-
                 <li>
-                  <button>Цены</button>
+                  <a href="#prices">Цены</a>
                 </li>
-
                 <li>
-                  <button>Контакты</button>
+                  <a href="#contacts">Контакты</a>
                 </li>
               </ul>
 

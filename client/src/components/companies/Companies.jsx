@@ -24,7 +24,7 @@ const Companies = () => {
                 </li>
               </ul>
 
-              <Link to="#contacts">Связаться</Link>
+              <a href="#contacts">Связаться</a>
             </aside>
             <aside className={style.companies__right}>
               <ul>

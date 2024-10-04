@@ -23,12 +23,16 @@ const Slider = () => {
             grabCursor={true}
             breakpoints={{
               768: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.05,
                 spaceBetween: 30,
               },
-              1024: {
-                slidesPerView: 2.3,
+              1465: {
+                slidesPerView: 1.05,
                 spaceBetween: 40,
+              },
+
+              1920: {
+                slidesPerView: 2.3,
               },
             }}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -81,7 +85,7 @@ const Slider = () => {
             </SwiperSlide>
           </Swiper>
 
-          <div className={style.slider__navigation}>
+          {/* <div className={style.slider__navigation}>
             <button onClick={() => swiperRef.current?.slidePrev()}>
               <img src={chevronLeft} alt="prev" />
             </button>
@@ -89,7 +93,7 @@ const Slider = () => {
             <button onClick={() => swiperRef.current?.slideNext()}>
               <img src={chevronRight} alt="next" />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ const Head = () => {
             <p>Правовое сопровождение бизнеса</p>
           </div>
 
-          <Link to="#contacts">Связаться с нами</Link>
+          <a href="#contacts">Связаться с нами</a>
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const About = () => {
       <div className="container">
         <div className={style.about__wrapper}>
           <div className={style.about__link}>
-            <Link to="#contacts">Подробнее</Link>
+            <a href="#contacts">Подробнее</a>
           </div>
 
           <div className={style.about__title}>
