@@ -1,3 +1,4 @@
+import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
@@ -16,68 +17,44 @@ app.use(cors());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
+app.use(bodyParser.json({ limit: "20mb" }));
+app.use(
+  bodyParser.urlencoded({
+    limit: "200mb",
+    extended: true,
+    parameterLimit: 1000000,
+  })
+);
 
 const transporter = nodemailer.createTransport({
   host: "smtp.mail.ru",
   port: 465,
-  secure: false,
+  secure: true,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
-  },
-  tls: {
-    rejectUnauthorized: false,
   },
 });
 
 /* ROUTES */
 app.post("/api/sendMail", async (req, res) => {
   try {
-    const { email, phone, fullName, message } = req.body;
+    const { email, fullName, phone, message } = req.body;
 
     const html = `
       <div style="display: flex; flex-direction: column; gap: 20px;">
-        <h1>Новое сообщение из формы на сайте!</h1>
+        <h1>Новое заявка!</h1>
         <p>Имя: ${fullName}</p>
-        <p>Телефон: ${phone}</p>
         <p>E-mail: ${email}</p>
-        <p>Сообщение: ${message}</p>
-      </div>
-    `;
-
-    await transporter.sendMail({
-      from: process.env.EMAIL,
-      to: process.env.EMAIL,
-      subject: `Новое сообщение из формы на сайте`,
-      html: html,
-    });
-
-    res.send("Сообщение отправлено!");
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({
-      message: "Не удалось отправить письмо",
-    });
-  }
-});
-
-app.post("/api/telMail", async (req, res) => {
-  try {
-    const { phone, fullName, message } = req.body;
-
-    const html = `
-      <div style="display: flex; flex-direction: column; gap: 20px;">
-        <h1>Новое сообщение из формы на сайте!</h1>
-        <p>Имя: ${fullName}</p>
         <p>Телефон: ${phone}</p>
         <p>Сообщение: ${message}</p>
       </div>
     `;
 
     await transporter.sendMail({
-      from: process.env.EMAIL,
-      to: process.env.EMAIL,
-      subject: `Новое сообщение из формы на сайте`,
+      from: process.env.EMAIL, // Адрес отправителя
+      to: process.env.EMAIL, // Адрес получателя
+      subject: `Новое сообщение`,
       html: html,
     });
 
@@ -85,7 +62,7 @@ app.post("/api/telMail", async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).json({
-      message: "Не удалось отправить письмо",
+      message: "Не удалось отправить сообщение",
     });
   }
 });
