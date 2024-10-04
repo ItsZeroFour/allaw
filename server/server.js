@@ -20,7 +20,7 @@ app.use(morgan("common"));
 const transporter = nodemailer.createTransport({
   host: "smtp.mail.ru",
   port: 465,
-  secure: false,
+  secure: true,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
@@ -28,12 +28,16 @@ const transporter = nodemailer.createTransport({
   tls: {
     rejectUnauthorized: false,
   },
+  logger: true, // Включаем логирование
+  debug: true,  // Включаем режим отладки
 });
 
 /* ROUTES */
 app.post("/api/sendMail", async (req, res) => {
   try {
     const { email, phone, fullName, message } = req.body;
+
+    console.log(process.env.EMAIL, process.env.PASS)
 
     const html = `
       <div style="display: flex; flex-direction: column; gap: 20px;">
