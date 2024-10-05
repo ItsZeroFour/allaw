@@ -28,6 +28,12 @@
     height: 80px;
     width: auto;
   }
+
+  h2 {
+    @media (max-width: 520px) {
+      width: 300px !important;
+    }
+  }
 }
 
 .header__burger {
@@ -66,12 +72,9 @@
   }
 }
 
-.header__right {
-  a {
-    font-size: 20px;
-
-    &:hover {
-      text-decoration: underline;
-    }
+.header__right > a {
+  font-size: 30px;
+  &:hover {
+    text-decoration: underline;
   }
 }
