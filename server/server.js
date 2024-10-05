@@ -25,19 +25,12 @@ const transporter = nodemailer.createTransport({
     user: process.env.EMAIL,
     pass: process.env.PASS,
   },
-  tls: {
-    rejectUnauthorized: false,
-  },
-  logger: true, // Включаем логирование
-  debug: true,  // Включаем режим отладки
 });
 
 /* ROUTES */
 app.post("/api/sendMail", async (req, res) => {
   try {
     const { email, phone, fullName, message } = req.body;
-
-    console.log(process.env.EMAIL, process.env.PASS)
 
     const html = `
       <div style="display: flex; flex-direction: column; gap: 20px;">
