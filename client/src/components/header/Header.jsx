@@ -1,9 +1,15 @@
 import React from "react";
 import style from "./style.module.scss";
-import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({
+  phone,
+  companyName,
+  headerButton1,
+  headerButton2,
+  headerButton3,
+  logo,
+}) => {
   return (
     <header className={style.header}>
       <div className="container">
@@ -17,26 +23,29 @@ const Header = () => {
               </div>
 
               <Link to="#">
-                <img src={logo} alt="logo" />
+                <img
+                  src={`${process.env.REACT_APP_CMS_URL}${logo}`}
+                  alt="logo"
+                />
               </Link>
 
-              <h2>Общество с ограниченной ответственностью «Деловое право»</h2>
+              <h2>{companyName}</h2>
             </aside>
 
             <aside className={style.header__right}>
               <ul>
                 <li>
-                  <a href="#services">Услуги</a>
+                  <a href="#services">{headerButton1}</a>
                 </li>
                 <li>
-                  <a href="#prices">Цены</a>
+                  <a href="#prices">{headerButton2}</a>
                 </li>
                 <li>
-                  <a href="#contacts">Контакты</a>
+                  <a href="#contacts">{headerButton3}</a>
                 </li>
               </ul>
 
-              <a href="tel:+79786710709">+79786710709</a>
+              <a href={`tel:${phone}`}>{phone}</a>
             </aside>
           </div>
         </div>

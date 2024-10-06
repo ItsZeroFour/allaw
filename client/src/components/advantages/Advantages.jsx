@@ -2,7 +2,12 @@ import React from "react";
 import style from "./style.module.scss";
 import checkImg from "../../assets/icons/check.svg";
 
-const Advantages = () => {
+const Advantages = ({
+  advTitle,
+  text_advantages_1,
+  text_advantages_2,
+  text_advantages_3,
+}) => {
   return (
     <section className={style.advantages}>
       <div className="container">
@@ -11,29 +16,26 @@ const Advantages = () => {
             <li>
               <img src={checkImg} alt="check" />
               <div>
-                <p>Комплексное юридическое сопровождение</p>
+                <p>{text_advantages_1}</p>
               </div>
             </li>
 
             <li>
               <img src={checkImg} alt="check" />
               <div>
-                <p>Персональный юрист всегда на связи с вами</p>
+                <p>{text_advantages_2}</p>
               </div>
             </li>
 
             <li>
               <img src={checkImg} alt="check" />
               <div>
-                <p>Максимально быстрое решение задач</p>
+                <p>{text_advantages_3}</p>
               </div>
             </li>
           </ul>
 
-          <h2>
-            Компания «Деловое право» – проводник в мире законов для вашего
-            бизнеса
-          </h2>
+          <h2>{advTitle}</h2>
         </div>
       </div>
     </section>

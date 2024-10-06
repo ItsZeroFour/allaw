@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import style from "./style.module.scss";
 import axios from "axios";
 
-const ContactUs = () => {
+const ContactUs = ({ contact_us_title }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -41,7 +41,7 @@ const ContactUs = () => {
     <section className={style.contact_us} id="contacts">
       <div className="container">
         <div className={style.contact_us__wrapper}>
-          <h2>Свяжитесь с нами</h2>
+          <h2>{contact_us_title}</h2>
 
           <form>
             <input

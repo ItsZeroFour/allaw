@@ -1,0 +1,415 @@
+{
+  "kind": "singleType",
+  "collectionName": "delovoe_pravos",
+  "info": {
+    "singularName": "delovoe-pravo",
+    "pluralName": "delovoe-pravos",
+    "displayName": "деловое_право",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "contact_us_button_text": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "header_button_1_text": {
+      "type": "string"
+    },
+    "header_button_2_text": {
+      "type": "string"
+    },
+    "header_button_3_text": {
+      "type": "string"
+    },
+    "leader_name": {
+      "type": "string"
+    },
+    "leader_role": {
+      "type": "string"
+    },
+    "leader_text_1": {
+      "type": "text"
+    },
+    "leader_text_2": {
+      "type": "text"
+    },
+    "leader_age": {
+      "type": "integer"
+    },
+    "text_advantages_1": {
+      "type": "text"
+    },
+    "text_advantages_2": {
+      "type": "text"
+    },
+    "text_advantages_3": {
+      "type": "text"
+    },
+    "text_advantages_title": {
+      "type": "string"
+    },
+    "services__title": {
+      "type": "string"
+    },
+    "services_item_1": {
+      "type": "text"
+    },
+    "services_item_2": {
+      "type": "text"
+    },
+    "services_item_3": {
+      "type": "text"
+    },
+    "services_adv_1": {
+      "type": "string"
+    },
+    "services_adv_2": {
+      "type": "string"
+    },
+    "services_adv_3": {
+      "type": "string"
+    },
+    "services_adv_4": {
+      "type": "string"
+    },
+    "services_list_item_1": {
+      "type": "text"
+    },
+    "services_list_item_2": {
+      "type": "text"
+    },
+    "services_list_item_3": {
+      "type": "text"
+    },
+    "services_list_item_4": {
+      "type": "text"
+    },
+    "services_list_item_5": {
+      "type": "text"
+    },
+    "services_list_item_6": {
+      "type": "text"
+    },
+    "services_list_item_7": {
+      "type": "string"
+    },
+    "services_list_item_8": {
+      "type": "text"
+    },
+    "services_button_text": {
+      "type": "string"
+    },
+    "services_notfound_title": {
+      "type": "string"
+    },
+    "advantage_2_title": {
+      "type": "string"
+    },
+    "advantage_2_item_1": {
+      "type": "text"
+    },
+    "advantage_2_item_2": {
+      "type": "text"
+    },
+    "advantage_2_item_3": {
+      "type": "text"
+    },
+    "advantage_2_item_4": {
+      "type": "text"
+    },
+    "advantage_2_item_5": {
+      "type": "text"
+    },
+    "advantage_2_item_6": {
+      "type": "text"
+    },
+    "price_title": {
+      "type": "string"
+    },
+    "price_item_1_name": {
+      "type": "string"
+    },
+    "price_item_1_desc": {
+      "type": "text"
+    },
+    "price_item_1_price": {
+      "type": "string"
+    },
+    "price_item_2_name": {
+      "type": "string"
+    },
+    "price_item_2_desc": {
+      "type": "text"
+    },
+    "price_item_2_price": {
+      "type": "string"
+    },
+    "price_item_3_name": {
+      "type": "string"
+    },
+    "price_item_3_desc": {
+      "type": "text"
+    },
+    "price_item_3_price": {
+      "type": "string"
+    },
+    "price_item_4_name": {
+      "type": "string"
+    },
+    "price_item_4_desc": {
+      "type": "text"
+    },
+    "price_item_4_price": {
+      "type": "string"
+    },
+    "price_item_5_name": {
+      "type": "string"
+    },
+    "price_item_5_desc": {
+      "type": "text"
+    },
+    "price_item_5_price": {
+      "type": "string"
+    },
+    "price_not_title": {
+      "type": "string"
+    },
+    "price_not_desc": {
+      "type": "text"
+    },
+    "single_price_title": {
+      "type": "string"
+    },
+    "single_price_item_1_title": {
+      "type": "string"
+    },
+    "single_price_item_1_item_1": {
+      "type": "text"
+    },
+    "single_price_item_1_price_1": {
+      "type": "string"
+    },
+    "single_price_item_1_item_2": {
+      "type": "text"
+    },
+    "single_price_item_1_price_2": {
+      "type": "string"
+    },
+    "single_price_item_1_item_3": {
+      "type": "text"
+    },
+    "single_price_item_1_price_3": {
+      "type": "string"
+    },
+    "single_price_item_2_title": {
+      "type": "string"
+    },
+    "single_price_item_2_item_1": {
+      "type": "text"
+    },
+    "single_price_item_2_price_1": {
+      "type": "string"
+    },
+    "single_price_item_2_item_2": {
+      "type": "text"
+    },
+    "single_price_item_2_price_2": {
+      "type": "string"
+    },
+    "single_price_item_2_item_3": {
+      "type": "text"
+    },
+    "single_price_item_2_price_3": {
+      "type": "string"
+    },
+    "single_price_item_3_title": {
+      "type": "string"
+    },
+    "single_price_item_3_price": {
+      "type": "string"
+    },
+    "single_price_item_4_title": {
+      "type": "string"
+    },
+    "single_price_item_4_price": {
+      "type": "string"
+    },
+    "any_questions_title": {
+      "type": "string"
+    },
+    "any_questions_button_text": {
+      "type": "string"
+    },
+    "slider_item_1_title": {
+      "type": "string"
+    },
+    "slider_item_1_text": {
+      "type": "text"
+    },
+    "slider_item_2_title": {
+      "type": "string"
+    },
+    "slider_item_2_text": {
+      "type": "text"
+    },
+    "slider_item_3_title": {
+      "type": "string"
+    },
+    "slider_item_3_text": {
+      "type": "text"
+    },
+    "slider_button_text": {
+      "type": "string"
+    },
+    "about_title": {
+      "type": "string"
+    },
+    "about_text": {
+      "type": "text"
+    },
+    "about_subtitle": {
+      "type": "string"
+    },
+    "about_desc": {
+      "type": "text"
+    },
+    "contact_us_title": {
+      "type": "string"
+    },
+    "contact_us_text": {
+      "type": "text"
+    },
+    "team_img_1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "team_name_1": {
+      "type": "string"
+    },
+    "team_speciality_1": {
+      "type": "text"
+    },
+    "team_img_2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "team_name_2": {
+      "type": "string"
+    },
+    "team_speciality_2": {
+      "type": "text"
+    },
+    "team_img_3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "team_name_3": {
+      "type": "string"
+    },
+    "team_speciality_3": {
+      "type": "text"
+    },
+    "team_img_4": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "team_name_4": {
+      "type": "string"
+    },
+    "team_speciality_4": {
+      "type": "text"
+    },
+    "team_img_5": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "team_name_5": {
+      "type": "string"
+    },
+    "team_speciality_5": {
+      "type": "text"
+    },
+    "phone_reception": {
+      "type": "string"
+    },
+    "phone_director": {
+      "type": "string"
+    },
+    "vk_link": {
+      "type": "string"
+    },
+    "leader_age_desc": {
+      "type": "text"
+    },
+    "slider_item_4_title": {
+      "type": "string"
+    },
+    "slider_item_4_text": {
+      "type": "text"
+    }
+  }
+}

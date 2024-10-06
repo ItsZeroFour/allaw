@@ -2,7 +2,31 @@ import React, { useState } from "react";
 import style from "./style.module.scss";
 import OrderCall from "../order_call/OrderCall";
 
-const SinglePrice = () => {
+const SinglePrice = ({
+  single_price_item_1_title,
+  single_price_item_1_item_1,
+  single_price_item_1_price_1,
+  single_price_item_1_item_2,
+  single_price_item_1_price_2,
+  single_price_item_1_item_3,
+  single_price_item_1_price_3,
+  single_price_item_2_title,
+  single_price_item_2_item_1,
+  single_price_item_2_price_1,
+  single_price_item_2_item_2,
+  single_price_item_2_price_2,
+  single_price_item_2_item_3,
+  single_price_item_2_price_3,
+
+  single_price_item_3_title,
+  single_price_item_3_price,
+
+  single_price_item_4_title,
+  single_price_item_4_price,
+
+  any_questions_title,
+  any_questions_button_text,
+}) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -11,72 +35,63 @@ const SinglePrice = () => {
         <div className={style.single_price__wrapper}>
           <ul>
             <li>
-              <h3>Претензионно-исковая работа и представительство</h3>
+              <h3>{single_price_item_1_title}</h3>
 
               <ul>
                 <li>
-                  <p>Составление претензий, жалоб, заявлений</p>
+                  <p>{single_price_item_1_item_1}</p>
                   <div></div>
-                  <p>от 2 500 ₽</p>
+                  <p>{single_price_item_1_price_1}</p>
                 </li>
 
                 <li>
-                  <p>
-                    Составление исковых заявлений, апелляционных, кассационных
-                    жалоб, возражений на них
-                  </p>
+                  <p>{single_price_item_1_item_2}</p>
                   <div></div>
-                  <p>от 10 000 ₽</p>
+                  <p>{single_price_item_1_price_2}</p>
                 </li>
 
                 <li>
-                  <p>
-                    Участие в судебном заседании/изучение материалов дел в судах
-                  </p>
+                  <p>{single_price_item_1_item_3}</p>
                   <div></div>
-                  <p>от 10 000 ₽</p>
+                  <p>{single_price_item_1_price_3}</p>
                 </li>
               </ul>
             </li>
 
             <li>
-              <h3>Договорная работа</h3>
+              <h3>{single_price_item_2_title}</h3>
 
               <ul>
                 <li>
-                  <p>Составление договора с типовыми условиями</p>
+                  <p>{single_price_item_2_item_1}</p>
                   <div></div>
-                  <p>от 5 000 ₽</p>
+                  <p>{single_price_item_2_price_1}</p>
                 </li>
 
                 <li>
-                  <p>Составление договора под индивидуальные условия</p>
+                  <p>{single_price_item_2_item_2}</p>
                   <div></div>
-                  <p>от 10 000 ₽</p>
+                  <p>{single_price_item_2_price_2}</p>
                 </li>
 
                 <li>
-                  <p>
-                    Участие в судебном заседании/изучение материалов дел в судах
-                  </p>
+                  <p>{single_price_item_2_item_3}</p>
                   <div></div>
-                  <p>от 10 000 ₽</p>
+                  <p>{single_price_item_2_price_3}</p>
                 </li>
               </ul>
             </li>
 
             <li>
-              <h3>Разработка учредительных документов</h3>
+              <h3>{single_price_item_3_title}</h3>
               <div></div>
-              <p>от 10 000 ₽</p>
+              <p>{single_price_item_3_price}</p>
             </li>
 
             <li>
-              <h3>
-                Составление заявлений о совершении регистрационных действий
-              </h3>
+              <h3>{single_price_item_4_title}</h3>
               <div></div>
-              <p>от 5 000 ₽</p>
+              <p>{single_price_item_4_price}</p>
             </li>
           </ul>
         </div>
@@ -85,13 +100,10 @@ const SinglePrice = () => {
       <div className={style.single_price__bottom}>
         <div className="container">
           <div className={style.single_price__bottom__wrapper}>
-            <h3>
-              Остались вопросы? Заполните форму и мы свяжемся с вами в ближайшее
-              время
-            </h3>
+            <h3>{any_questions_title}</h3>
 
             <button onClick={() => setShowModal(true)}>
-              Заказать консультацию
+              {any_questions_button_text}
             </button>
           </div>
         </div>

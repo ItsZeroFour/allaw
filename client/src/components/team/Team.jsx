@@ -6,16 +6,34 @@ import team3 from "../../assets/images/team/team-3.png";
 import team4 from "../../assets/images/team/team-4.png";
 import team5 from "../../assets/images/team/team-5.png";
 
-const Team = () => {
+const Team = ({
+  contact_us_text,
+  team_img_1,
+  team_name_1,
+  team_speciality_1,
+
+  team_img_2,
+  team_name_2,
+  team_speciality_2,
+
+  team_img_3,
+  team_name_3,
+  team_speciality_3,
+
+  team_img_4,
+  team_name_4,
+  team_speciality_4,
+
+  team_img_5,
+  team_name_5,
+  team_speciality_5,
+}) => {
   const [modalText, setModalText] = useState("");
   return (
     <section className={style.team}>
       <div className="container">
         <div className={style.team__wrapper}>
-          <h3>
-            Если Вам нужна оперативная и качественная правовая помощь,
-            обращайтесь к нам!
-          </h3>
+          <h3>{contact_us_text}</h3>
         </div>
       </div>
 
@@ -23,71 +41,56 @@ const Team = () => {
         <div className="container">
           <ul>
             <li>
-              <img src={team1} alt="Агафонова Людмила" />
-              <h4>Агафонова Людмила</h4>
-              <button
-                onClick={() =>
-                  setModalText(
-                    "Специализация: Трудовое право. Административное право. Корпоративное право. Законодательство об образовании. Лицензирование.  Ведение судебных споров, включая корпоративные споры, споры о защите деловой репутации, об оспаривании ненормативных правовых актов, споры, связанные с законодательством о земле, о признании договоров недействительными, споры, связанные с охраной интеллектуальной собственности (авторские права, право на корпоративное обозначение, товарный знак), о неисполнении обязательств по договорам, споры об административных правонарушениях и др."
-                  )
-                }
-              >
+              <img
+                src={`${process.env.REACT_APP_CMS_URL}${team_img_1}`}
+                alt={team_name_1}
+              />
+              <h4>{team_name_1}</h4>
+              <button onClick={() => setModalText(team_speciality_1)}>
                 Специализация
               </button>
             </li>
 
             <li>
-              <img src={team2} alt="Слободенюк Артём" />
-              <h4>Слободенюк Артём</h4>
-              <button
-                onClick={() =>
-                  setModalText(
-                    "Специализация: Гражданское право (вещное право, договорное право, авторское право). Международное частное право. Предпринимательское право.Работа с локальными нормативными актами, подготовка корпоративных документов.  Автор опубликованных в системе РИНЦ научных статей на такие темы, как: “Злоупотребление процессуальными правами в гражданском процессе”, “Проблемы разграничения категорий “основания” и “способы” прекращения обязательств”, “Цифровизация финансового сектора и антимонопольный комплаенс”, “Обход закона в международном частном праве: анализ правого явления и его последствий” и др."
-                  )
-                }
-              >
+              <img
+                src={`${process.env.REACT_APP_CMS_URL}${team_img_2}`}
+                alt={team_name_2}
+              />
+              <h4>{team_name_2}</h4>
+              <button onClick={() => setModalText(team_speciality_2)}>
                 Специализация
               </button>
             </li>
 
             <li>
-              <img src={team3} alt="Дрижжа Мария" />
-              <h4>Дрижжа Мария</h4>
-              <button
-                onClick={() =>
-                  setModalText(
-                    "Специализация: Земельное право. Регистрация прав и сделок с недвижимым имуществом. Наследственное право. Законодательство по вопросам кредитования.  Автор опубликованных в системе РИНЦ научных статей на такие темы, как: «Электронное правосудие в гражданском процессе», «Особенности использования интеллектуальной собственности в рамках доктрины Fair Use в США», «Санкционный комплаенс: становление и развитие в Российской Федерации» и т.д."
-                  )
-                }
-              >
+              <img
+                src={`${process.env.REACT_APP_CMS_URL}${team_img_3}`}
+                alt={team_name_3}
+              />
+              <h4>{team_name_3}</h4>
+              <button onClick={() => setModalText(team_speciality_3)}>
                 Специализация
               </button>
             </li>
 
             <li>
-              <img src={team4} alt="Ильин Вячеслав" />
-              <h4>Ильин Вячеслав</h4>
-              <button
-                onClick={() =>
-                  setModalText(
-                    "Специализация: Юридическая защита бизнеса при проверках контрольно-надзорных органов."
-                  )
-                }
-              >
+              <img
+                src={`${process.env.REACT_APP_CMS_URL}${team_img_4}`}
+                alt={team_name_4}
+              />
+              <h4>{team_name_4}</h4>
+              <button onClick={() => setModalText(team_speciality_4)}>
                 Специализация
               </button>
             </li>
 
             <li>
-              <img src={team5} alt="Сулейманова Эльмира" />
-              <h4>Сулейманова Эльмира</h4>
-              <button
-                onClick={() =>
-                  setModalText(
-                    "Специализация: Налоговое и финансовое право.  Ведение судебных споров, возникающие из налоговых правоотношений и споров по вопросам применения контрольно-кассовой техники."
-                  )
-                }
-              >
+              <img
+                src={`${process.env.REACT_APP_CMS_URL}${team_img_5}`}
+                alt={team_name_5}
+              />
+              <h4>{team_name_5}</h4>
+              <button onClick={() => setModalText(team_speciality_5)}>
                 Специализация
               </button>
             </li>

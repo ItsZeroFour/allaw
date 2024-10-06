@@ -1,8 +1,23 @@
 import React from "react";
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
 
-const Companies = () => {
+const Companies = ({
+  services_adv_1,
+  services_adv_2,
+  services_adv_3,
+  services_adv_4,
+  services_list_item_1,
+  services_list_item_2,
+  services_list_item_3,
+  services_list_item_4,
+  services_list_item_5,
+  services_list_item_6,
+  services_list_item_7,
+  services_list_item_8,
+  services_button_text,
+  services_notfound_title,
+  advantage_2_title,
+}) => {
   return (
     <section className={style.companies}>
       <div className="container">
@@ -11,58 +26,45 @@ const Companies = () => {
             <aside className={style.companies__left}>
               <ul>
                 <li>
-                  <p>Партнерство</p>
+                  <p>{services_adv_1}</p>
                 </li>
                 <li>
-                  <p>Оптимизация расходов</p>
+                  <p>{services_adv_2}</p>
                 </li>
                 <li>
-                  <p>Экономия времени</p>
+                  <p>{services_adv_3}</p>
                 </li>
                 <li>
-                  <p>Выгода для всех</p>
+                  <p>{services_adv_4}</p>
                 </li>
               </ul>
 
-              <a href="#contacts">Связаться</a>
+              <a href="#contacts">{services_button_text}</a>
             </aside>
             <aside className={style.companies__right}>
               <ul>
-                <li>Консультации юриста по правовым вопросам деятельности</li>
+                <li>{services_list_item_1}</li>
 
-                <li>
-                  Составление договоров, в том числе: договор купли-продажи,
-                  договор аренды, договор оказания услуг, трудовой договор,
-                  договор ГПХ, договор дарения, договор подряда, договор займа и
-                  другие виды договоров
-                </li>
+                <li>{services_list_item_2}</li>
 
-                <li>Оформление разрешительных документов, лицензий</li>
+                <li>{services_list_item_3}</li>
 
-                <li>
-                  Подготовка документов: корпоративные документы, письма,
-                  претензии, иски в суд и др.
-                </li>
+                <li>{services_list_item_4}</li>
 
-                <li>Представительство в судах и контрольных органах</li>
+                <li>{services_list_item_5}</li>
 
-                <li>Защита авторских прав</li>
+                <li>{services_list_item_6}</li>
 
-                <li>Регистрация бизнеса и ликвидация бизнеса «под ключ»</li>
+                <li>{services_list_item_7}</li>
 
-                <li>
-                  «Брендирование» − регистрация товарного знака и промышленного
-                  образца
-                </li>
+                <li>{services_list_item_8}</li>
               </ul>
 
-              <h2>
-                Не нашли необходимую услугу? <br /> Просто свяжитесь с нами
-              </h2>
+              <h2>{services_notfound_title}</h2>
             </aside>
           </div>
 
-          <h2>Юридический аутсорсинг – идеальное решение для вашего бизнеса</h2>
+          <h2>{advantage_2_title}</h2>
         </div>
       </div>
     </section>
