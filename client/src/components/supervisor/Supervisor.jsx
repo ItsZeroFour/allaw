@@ -37,7 +37,7 @@ const supervisor = ({
 
           <aside className={style.supervisor__right}>
             <img
-              src={`${process.env.REACT_APP_CMS_URL}${leader_photo}`}
+              src={supervisorImage}
               alt={leader_name}
             />
           </aside>
