@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import style from "./style.module.scss";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const OrderCall = ({ openModal }) => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [agree, setAgree] = useState(false);
 
   const sendMail = async (event) => {
     event.preventDefault();
+
+    if (!agree) return;
 
     try {
       if (!fullName || !phone || !message) {
@@ -59,6 +63,22 @@ const OrderCall = ({ openModal }) => {
             onChange={(event) => setMessage(event.target.value)}
           />
         </form>
+
+        <div
+          style={{
+            marginTop: 20,
+            display: "flex",
+            gap: 10,
+            alignItems: "center",
+          }}
+        >
+          <input type="checkbox" onChange={() => setAgree(!agree)} />
+
+          <p>
+            Согласен на{" "}
+            <Link to="/policy.docx">обработку персональных данных</Link>
+          </p>
+        </div>
 
         <button onClick={sendMail}>Отправить</button>
       </div>

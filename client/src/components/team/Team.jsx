@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import style from "./style.module.scss";
-import team1 from "../../assets/images/team/team-1.png";
-import team2 from "../../assets/images/team/team-2.png";
-import team3 from "../../assets/images/team/team-3.png";
-import team4 from "../../assets/images/team/team-4.png";
-import team5 from "../../assets/images/team/team-5.png";
 
 const Team = ({
   contact_us_text,

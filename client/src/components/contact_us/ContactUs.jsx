@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import style from "./style.module.scss";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ContactUs = ({ contact_us_title }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [agree, setAgree] = useState(false);
 
   const sendMail = async (event) => {
     event.preventDefault();
+
+    if (!agree) return;
 
     try {
       if (!email || !fullName || !phone || !message) {
@@ -66,7 +70,25 @@ const ContactUs = ({ contact_us_title }) => {
             ></textarea>
           </form>
 
-          <button onClick={sendMail}>Отправить</button>
+          <div
+            style={{
+              marginTop: 20,
+              display: "flex",
+              gap: 10,
+              alignItems: "center",
+            }}
+          >
+            <input type="checkbox" onChange={() => setAgree(!agree)} />
+
+            <p>
+              Согласен на{" "}
+              <Link to="/policy.docx">обработку персональных данных</Link>
+            </p>
+          </div>
+
+          <button onClick={sendMail} disabled={!agree}>
+            Отправить
+          </button>
         </div>
       </div>
     </section>
