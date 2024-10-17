@@ -32,7 +32,13 @@
         position: absolute;
         width: 20px;
         height: 20px;
-        background: var(--color-gold);
+        background: linear-gradient(
+          90deg,
+          rgba(190, 134, 60, 1) 0%,
+          rgba(236, 200, 124, 1) 46%,
+          rgba(236, 200, 124, 1) 61%,
+          rgba(190, 134, 60, 1) 100%
+        );
 
         left: -5%;
         top: 5px;
@@ -121,7 +127,13 @@
     button {
       padding: 15px 40px;
 
-      background: var(--color-gold);
+      background: linear-gradient(
+        90deg,
+        rgba(190, 134, 60, 1) 0%,
+        rgba(236, 200, 124, 1) 46%,
+        rgba(236, 200, 124, 1) 61%,
+        rgba(190, 134, 60, 1) 100%
+      );
       color: var(--color-dark);
 
       font-size: 24px;
@@ -142,7 +154,13 @@
         width: 500px;
         height: 4px;
 
-        background: var(--color-gold);
+        background: linear-gradient(
+          90deg,
+          rgba(190, 134, 60, 1) 0%,
+          rgba(236, 200, 124, 1) 46%,
+          rgba(236, 200, 124, 1) 61%,
+          rgba(190, 134, 60, 1) 100%
+        );
 
         @media (max-width: 1445px) {
           display: none;

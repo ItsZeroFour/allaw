@@ -16,11 +16,11 @@ const Header = ({
         <div className="container">
           <div className={style.header__wrapper}>
             <aside className={style.header__left}>
-              <div className={style.header__burger}>
+              {/* <div className={style.header__burger}>
                 <div></div>
                 <div></div>
                 <div></div>
-              </div>
+              </div> */}
 
               <Link to="#">
                 <img

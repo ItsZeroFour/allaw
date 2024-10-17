@@ -48,6 +48,15 @@ const Footer = ({
           </Link>
         </div>
       </div>
+
+      <div className={style.footer__data}>
+        <div className="container">
+          <div className={style.footer__data__wrapper}>
+            <p>ОГРН 1249100000566</p>
+            <p>ИНН 9109030144</p>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };

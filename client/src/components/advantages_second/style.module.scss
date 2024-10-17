@@ -55,6 +55,15 @@
       &:nth-child(6) {
         background: #000;
       }
+
+      @media (max-width: 1580px) {
+        width: 400px;
+      }
+    }
+
+    @media (max-width: 1580px) {
+      justify-content: center;
+      align-items: center;
     }
   }
 }

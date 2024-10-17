@@ -34,6 +34,10 @@ function App() {
     getData();
   }, []);
 
+  const timestamp = 1728565247034;
+  const date = new Date(timestamp);
+  console.log(date.toLocaleString());
+
   return (
     <div className="App">
       {data ? (
