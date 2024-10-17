@@ -52,7 +52,13 @@
             left: -6%;
             width: 15px;
             height: 15px;
-            background: var(--color-gold);
+            background: linear-gradient(
+              90deg,
+              rgba(190, 134, 60, 1) 0%,
+              rgba(236, 200, 124, 1) 46%,
+              rgba(236, 200, 124, 1) 61%,
+              rgba(190, 134, 60, 1) 100%
+            );
           }
         }
 
@@ -94,7 +100,13 @@
             left: 0;
             width: 50%;
             height: 3px;
-            background: var(--color-gold);
+            background: linear-gradient(
+              90deg,
+              rgba(190, 134, 60, 1) 0%,
+              rgba(236, 200, 124, 1) 46%,
+              rgba(236, 200, 124, 1) 61%,
+              rgba(190, 134, 60, 1) 100%
+            );
           }
         }
       }

@@ -25,9 +25,15 @@
 
   a {
     position: absolute;
-    background: var(--color-gold);
+    background: linear-gradient(
+      90deg,
+      rgba(190, 134, 60, 1) 0%,
+      rgba(236, 200, 124, 1) 46%,
+      rgba(236, 200, 124, 1) 61%,
+      rgba(190, 134, 60, 1) 100%
+    );
     padding: 10px 30px;
-    color: var(--color-white);
+    color: var(--color-dark);
     font-size: 24px;
     font-family: "Montserrat-bd", sans-serif;
     font-weight: 700;
@@ -98,6 +104,12 @@
     transform: translate(-50%, 50%);
     width: 600px;
     height: 5px;
-    background: var(--color-gold);
+    background: linear-gradient(
+      90deg,
+      rgba(190, 134, 60, 1) 0%,
+      rgba(236, 200, 124, 1) 46%,
+      rgba(236, 200, 124, 1) 61%,
+      rgba(190, 134, 60, 1) 100%
+    );
   }
 }

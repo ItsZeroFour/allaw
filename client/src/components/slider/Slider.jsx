@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import style from "./style.module.scss";
+import arrowLeft from "../../assets/icons/chevron-left.svg";
+import arrowRight from "../../assets/icons/chevron-right.svg";
 
 const Slider = ({
   slider_item_1_title,
@@ -20,6 +22,23 @@ const Slider = ({
     <section className={style.slider}>
       <div className="container">
         <div className={style.slider__wrapper}>
+          <button onClick={() => swiperRef.current?.slidePrev()}>
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 12H5M5 12L12 19M5 12L12 5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
           <Swiper
             modules={[Navigation]}
             navigation
@@ -71,6 +90,23 @@ const Slider = ({
               </div>
             </SwiperSlide>
           </Swiper>
+          <button onClick={() => swiperRef.current?.slideNext()}>
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19M19 12L12 5M19 12L12 19"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
