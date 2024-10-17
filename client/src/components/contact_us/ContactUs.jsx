@@ -81,8 +81,7 @@ const ContactUs = ({ contact_us_title }) => {
             <input type="checkbox" onChange={() => setAgree(!agree)} />
 
             <p>
-              Согласен на{" "}
-              <Link to="/policy.docx">обработку персональных данных</Link>
+              Нажимая кнопку «Отправить», я даю свое согласие на <Link to="/policy.docx" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline"}}>обработку моих персональных данных</Link>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и в целях, определенных в Согласии на обработку персональных данных.
             </p>
           </div>
 
