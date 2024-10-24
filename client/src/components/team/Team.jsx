@@ -48,17 +48,6 @@ const Team = ({
 
             <li>
               <img
-                src={`${process.env.REACT_APP_CMS_URL}${team_img_2}`}
-                alt={team_name_2}
-              />
-              <h4>{team_name_2}</h4>
-              <button onClick={() => setModalText(team_speciality_2)}>
-                Специализация
-              </button>
-            </li>
-
-            <li>
-              <img
                 src={`${process.env.REACT_APP_CMS_URL}${team_img_3}`}
                 alt={team_name_3}
               />
