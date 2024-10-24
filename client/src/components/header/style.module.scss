@@ -51,7 +51,8 @@
 .header__right {
   ul {
     li {
-      a {
+      a,
+      button {
         padding: 10px 20px;
         background: var(--color-white);
         color: var(--color-dark);
@@ -66,7 +67,9 @@
       }
 
       @media (max-width: 1850px) {
-        display: none;
+        &:not(:last-child) {
+          display: none;
+        }
       }
     }
   }
@@ -76,5 +79,113 @@
   font-size: 30px;
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.header__contacts {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 9999;
+
+  animation-name: opacity;
+  animation-duration: 0.3s;
+}
+
+.header__contacts__wrapper {
+  position: relative;
+
+  width: 70vw;
+  height: 800px;
+
+  background: var(--color-white);
+  border-radius: 20px;
+  color: var(--color-dark);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  p,
+  a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 20px;
+    font-family: "Montserrat-md", sans-serif;
+    font-weight: 500;
+
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  iframe {
+    border-radius: 10px;
+  }
+}
+
+.header__contacts__close {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 93%;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--color-dark);
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--color-dark);
+    transform: rotate(-45deg);
   }
 }

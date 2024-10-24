@@ -49,6 +49,10 @@ function App() {
             headerButton2={data.header_button_2_text}
             headerButton3={data.header_button_3_text}
             logo={data.logo.url}
+            phone_reception={data.phone_reception}
+            phone_director={data.phone_director}
+            vk_link={data.vk_link}
+            email={data.email}
           />
 
           <main>
