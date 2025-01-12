@@ -67,6 +67,35 @@ app.post("/api/sendMail", async (req, res) => {
   }
 });
 
+app.post("/api/telMail", async (req, res) => {
+  try {
+    const { phone, fullName, message } = req.body;
+
+    const html = `
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <h1>Новое сообщение из формы на сайте!</h1>
+        <p>Имя: ${fullName}</p>
+        <p>Телефон: ${phone}</p>
+        <p>Сообщение: ${message}</p>
+      </div>
+    `;
+
+    await transporter.sendMail({
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: `Новое сообщение из формы на сайте`,
+      html: html,
+    });
+
+    res.send("Сообщение отправлено!");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      message: "Не удалось отправить письмо",
+    });
+  }
+});
+
 /* START FUNCTION */
 async function start() {
   try {

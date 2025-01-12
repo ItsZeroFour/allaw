@@ -12,11 +12,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  z-index: 999;
 }
 
 .order_call__wrapper {
   padding: 20px;
   background: var(--color-white);
+  color: #000;
   border-radius: 10px;
   width: 50vw;
 

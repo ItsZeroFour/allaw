@@ -74,10 +74,9 @@ const OrderCall = ({ openModal }) => {
         >
           <input type="checkbox" onChange={() => setAgree(!agree)} />
 
-          <p>
-            Согласен на{" "}
-            <Link to="/policy.docx">обработку персональных данных</Link>
-          </p>
+            <p>
+              Нажимая кнопку «Отправить», я даю свое согласие на <Link to="/policy.docx" style={{textDecoration: "underline"}}>обработку моих персональных данных</Link>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и в целях, определенных в Согласии на>
+            </p>
         </div>
 
         <button onClick={sendMail}>Отправить</button>
