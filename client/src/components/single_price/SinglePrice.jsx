@@ -17,6 +17,8 @@ const SinglePrice = ({
   single_price_item_2_price_2,
   single_price_item_2_item_3,
   single_price_item_2_price_3,
+  single_price_item_2_item_4,
+  single_price_item_2_price_4,
 
   single_price_item_3_title,
   single_price_item_3_price,
@@ -72,6 +74,12 @@ const SinglePrice = ({
                   <p>{single_price_item_2_item_2}</p>
                   <div></div>
                   <p>{single_price_item_2_price_2}</p>
+                </li>
+
+                <li>
+                  <p>{single_price_item_2_item_4}</p>
+                  <div></div>
+                  <p>{single_price_item_2_price_4}</p>
                 </li>
 
                 <li>

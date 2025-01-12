@@ -147,6 +147,8 @@ function App() {
               single_price_item_3_price={data.single_price_item_3_price}
               single_price_item_4_title={data.single_price_item_4_title}
               single_price_item_4_price={data.single_price_item_4_price}
+              single_price_item_2_item_4={data.single_price_item_2_item_4}
+              single_price_item_2_price_4={data.single_price_item_2_price_4}
               any_questions_title={data.any_questions_title}
               any_questions_button_text={data.any_questions_button_text}
             />
