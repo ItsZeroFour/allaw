@@ -410,6 +410,12 @@
     },
     "slider_item_4_text": {
       "type": "text"
+    },
+    "single_price_item_2_item_4": {
+      "type": "string"
+    },
+    "single_price_item_2_price_4": {
+      "type": "text"
     }
   }
 }
