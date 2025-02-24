@@ -141,6 +141,7 @@ export interface ApiDelovoePravoDelovoePravo extends Struct.SingleTypeSchema {
     slider_item_4_text: Schema.Attribute.Text;
     single_price_item_2_item_4: Schema.Attribute.String;
     single_price_item_2_price_4: Schema.Attribute.Text;
+    policy: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

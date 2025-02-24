@@ -416,6 +416,9 @@
     },
     "single_price_item_2_price_4": {
       "type": "text"
+    },
+    "policy": {
+      "type": "text"
     }
   }
 }
