@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const ContactUs = ({ contact_us_title }) => {
+const ContactUs = ({ contact_us_title, policy }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -78,10 +78,7 @@ const ContactUs = ({ contact_us_title }) => {
               alignItems: "center",
             }}
           >
-
-            <p>
-               Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и в целях, определенных в Согласии на обработку персональных данных
-            </p>
+            <p>{policy}</p>
           </div>
 
           <button onClick={sendMail} disabled={!agree}>

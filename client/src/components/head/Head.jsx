@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import style from "./style.module.scss";
 import OrderCall from "../order_call/OrderCall";
 
-const Head = ({ title, subTitle, buttonText }) => {
+const Head = ({ title, subTitle, buttonText, policy }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -18,7 +18,7 @@ const Head = ({ title, subTitle, buttonText }) => {
         </div>
       </div>
 
-      {showModal && <OrderCall openModal={setShowModal} />}
+      {showModal && <OrderCall openModal={setShowModal} policy={policy} />}
     </section>
   );
 };

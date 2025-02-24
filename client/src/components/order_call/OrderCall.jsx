@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const OrderCall = ({ openModal }) => {
+const OrderCall = ({ openModal, policy }) => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
@@ -72,11 +72,7 @@ const OrderCall = ({ openModal }) => {
             alignItems: "center",
           }}
         >
-          <input type="checkbox" onChange={() => setAgree(!agree)} />
-
-            <p>
-              Нажимая кнопку «Отправить», я даю свое согласие на <Link to="/policy.docx" style={{textDecoration: "underline"}}>обработку моих персональных данных</Link>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и в целях, определенных в Согласии на>
-            </p>
+          <p>{policy}</p>
         </div>
 
         <button onClick={sendMail}>Отправить</button>

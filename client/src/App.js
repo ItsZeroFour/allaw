@@ -26,7 +26,7 @@ function App() {
 
       setData(data.data);
 
-      console.log(data)
+      console.log(data);
     } catch (err) {
       console.log(err);
     }
@@ -62,6 +62,7 @@ function App() {
               title={data.title}
               subTitle={data.sub_title}
               buttonText={data.contact_us_button_text}
+              policy={data.policy}
             />
             <Supervisor
               leader_name={data.leader_name}
@@ -171,7 +172,10 @@ function App() {
               about_desc={data.about_desc}
               slider_button_text={data.slider_button_text}
             />
-            <ContactUs contact_us_title={data.contact_us_title} />
+            <ContactUs
+              contact_us_title={data.contact_us_title}
+              policy={data.policy}
+            />
             <Team
               contact_us_text={data.contact_us_text}
               team_img_1={data.team_img_1.url}
