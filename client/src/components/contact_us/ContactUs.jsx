@@ -8,7 +8,7 @@ const ContactUs = ({ contact_us_title }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [agree, setAgree] = useState(false);
+  const [agree, setAgree] = useState(true);
 
   const sendMail = async (event) => {
     event.preventDefault();
@@ -78,10 +78,9 @@ const ContactUs = ({ contact_us_title }) => {
               alignItems: "center",
             }}
           >
-            <input type="checkbox" onChange={() => setAgree(!agree)} />
 
             <p>
-              Нажимая кнопку «Отправить», я даю свое согласие на <Link to="/policy.docx" target="_blank" rel="noopener noreferrer" style={{textDecoration: "underline"}}>обработку моих персональных данных</Link>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и в целях, определенных в Согласии на обработку персональных данных.
+               Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и в целях, определенных в Согласии на обработку персональных данных
             </p>
           </div>
 
