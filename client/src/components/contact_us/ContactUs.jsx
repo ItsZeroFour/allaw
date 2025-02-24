@@ -4,8 +4,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const ContactUs = ({ contact_us_title, policy }) => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [agree, setAgree] = useState(true);
@@ -16,15 +14,13 @@ const ContactUs = ({ contact_us_title, policy }) => {
     if (!agree) return;
 
     try {
-      if (!email || !fullName || !phone || !message) {
+      if (!phone || !message) {
         return alert("Ошибка! Заполните все поля");
       }
 
       const data = await axios.post(
         `${process.env.REACT_APP_SERVER_URL}/sendMail`,
         {
-          email,
-          fullName,
           phone,
           message,
         }
@@ -61,7 +57,7 @@ const ContactUs = ({ contact_us_title, policy }) => {
             <input
               type="number"
               maxLength={12}
-              placeholder="+7(978)123-45-67 *"
+              placeholder="Номер телефона для связи *"
               onChange={(event) => setPhone(event.target.value)}
             />
             <textarea

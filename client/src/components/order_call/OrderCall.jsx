@@ -4,10 +4,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const OrderCall = ({ openModal, policy }) => {
-  const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [agree, setAgree] = useState(false);
+  const [agree, setAgree] = useState(true);
 
   const sendMail = async (event) => {
     event.preventDefault();
@@ -15,14 +14,13 @@ const OrderCall = ({ openModal, policy }) => {
     if (!agree) return;
 
     try {
-      if (!fullName || !phone || !message) {
+      if (!phone || !message) {
         return alert("Ошибка! Заполните все поля");
       }
 
       const data = await axios.post(
         `${process.env.REACT_APP_SERVER_URL}/telMail`,
         {
-          fullName,
           phone,
           message,
         }
@@ -54,7 +52,7 @@ const OrderCall = ({ openModal, policy }) => {
           /> */}
           <input
             type="number"
-            placeholder="Телефон"
+            placeholder="Номер телефона для связи"
             onChange={(event) => setPhone(event.target.value)}
           />
           <textarea

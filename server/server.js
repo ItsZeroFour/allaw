@@ -39,13 +39,11 @@ const transporter = nodemailer.createTransport({
 /* ROUTES */
 app.post("/api/sendMail", async (req, res) => {
   try {
-    const { email, fullName, phone, message } = req.body;
+    const { phone, message } = req.body;
 
     const html = `
       <div style="display: flex; flex-direction: column; gap: 20px;">
         <h1>Новое заявка!</h1>
-        <p>Имя: ${fullName}</p>
-        <p>E-mail: ${email}</p>
         <p>Телефон: ${phone}</p>
         <p>Сообщение: ${message}</p>
       </div>
