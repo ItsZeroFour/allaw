@@ -48,7 +48,7 @@ const ContactUs = ({ contact_us_title, policy }) => {
           <h2>{contact_us_title}</h2>
 
           <form>
-            <input
+            {/* <input
               type="text"
               placeholder="Имя *"
               onChange={(event) => setFullName(event.target.value)}
@@ -57,7 +57,7 @@ const ContactUs = ({ contact_us_title, policy }) => {
               type="email"
               placeholder="example@mail.ru *"
               onChange={(event) => setEmail(event.target.value)}
-            />
+            /> */}
             <input
               type="number"
               maxLength={12}
@@ -78,7 +78,7 @@ const ContactUs = ({ contact_us_title, policy }) => {
               alignItems: "center",
             }}
           >
-            <p>{policy}</p>
+            {/* <p>{policy}</p> */}
           </div>
 
           <button onClick={sendMail} disabled={!agree}>

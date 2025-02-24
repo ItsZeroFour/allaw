@@ -47,11 +47,11 @@ const OrderCall = ({ openModal, policy }) => {
       ></button>
       <div className={style.order_call__wrapper}>
         <form>
-          <input
+          {/* <input
             type="text"
             placeholder="Имя"
             onChange={(event) => setFullName(event.target.value)}
-          />
+          /> */}
           <input
             type="number"
             placeholder="Телефон"
@@ -72,7 +72,7 @@ const OrderCall = ({ openModal, policy }) => {
             alignItems: "center",
           }}
         >
-          <p>{policy}</p>
+          {/* <p>{policy}</p> */}
         </div>
 
         <button onClick={sendMail}>Отправить</button>
