@@ -176,24 +176,6 @@ function App() {
               contact_us_title={data.contact_us_title}
               policy={data.policy}
             />
-            <Team
-              contact_us_text={data.contact_us_text}
-              team_img_1={data.team_img_1.url}
-              team_name_1={data.team_name_1}
-              team_speciality_1={data.team_speciality_1}
-              team_img_2={data.team_img_2.url}
-              team_name_2={data.team_name_2}
-              team_speciality_2={data.team_speciality_2}
-              team_img_3={data.team_img_3.url}
-              team_name_3={data.team_name_3}
-              team_speciality_3={data.team_speciality_3}
-              team_img_4={data.team_img_4.url}
-              team_name_4={data.team_name_4}
-              team_speciality_4={data.team_speciality_4}
-              team_img_5={data.team_img_5.url}
-              team_name_5={data.team_name_5}
-              team_speciality_5={data.team_speciality_5}
-            />
           </main>
 
           <Footer
